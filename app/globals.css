@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-purple: #6B2F9E;
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
 }
 
-body {
-  background-color: #000;
-  color: #fff;
+.bg-purple-gradient {
+  background: linear-gradient(135deg, #6B2F9E 0%, #000000 100%);
 }
 
+.btn-purple {
+  @apply bg-[#6B2F9E] text-white px-6 py-2 rounded-full font-bold hover:opacity-90 transition-opacity;
+}
